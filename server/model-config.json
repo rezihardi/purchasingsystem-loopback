@@ -38,5 +38,17 @@
   "Costumer": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "Admin": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Commodity": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "transaction": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

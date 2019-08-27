@@ -3,7 +3,6 @@
     "name": "db",
     "connector": "memory"
   },
-
   "mongodb": {
     "database": "mydb",
     "name": "mongodb",

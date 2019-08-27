@@ -1,6 +1,6 @@
 {
   "name": "Admin",
-  "plural": "Ad",
+  "plural": "Admin",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

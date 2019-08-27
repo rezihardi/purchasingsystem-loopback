@@ -67,7 +67,7 @@ module.exports = function (Commodity) {
     'getNameLike', {
       description: 'get name like',
       accepts: [{
-        arg: 'name',
+        arg: 'category',
         type: 'string'
       }],
       returns: {
@@ -114,4 +114,50 @@ module.exports = function (Commodity) {
       callback(err);
     });
   };
-}
+
+
+
+
+
+  //remote method ID
+  Commodity.remoteMethod(
+    'getById', {
+      description: 'get by id',
+      accepts: [{
+        arg: 'id',
+        type: 'string'
+      }],
+      returns: {
+        arg: 'res',
+        type: 'object',
+        root: true
+      },
+      http: {
+        path: '/getCommodityId',
+        verb: 'get'
+      }
+    }
+  );
+
+
+  Commodity.getById = function (id, callback) {
+    new Promise(function (resolve, reject) {
+
+      Commodity.findById(id, function (err, result) {
+        if (err) reject(err)
+        if (result === null) {
+          err = new Error("Nama Tidak Dapat Ditemukan")
+          err.statusCode = 404
+          reject(err)
+        }
+        resolve(result)
+      })
+    }).then(function (res) {
+      //callback result
+      if (!res) callback(err)
+      return callback(null, res)
+    }).catch(function (err) {
+      callback(err);
+    });
+  }
+};

@@ -50,5 +50,17 @@
   "Transaction": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "Project": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Employee": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Roles": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

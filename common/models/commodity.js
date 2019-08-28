@@ -17,7 +17,7 @@ module.exports = function (Commodity) {
         root: true
       },
       http: {
-        path: '/getNameCommo',
+        path: '/getNameName',
         verb: 'get'
       }
     }

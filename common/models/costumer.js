@@ -2,6 +2,7 @@
 
 module.exports = function (Costumer) {
 
+  //get name costumer
   //remote method
   Costumer.remoteMethod(
     'getNameLike', {
@@ -16,7 +17,7 @@ module.exports = function (Costumer) {
         root: true
       },
       http: {
-        path: '/getNameLike',
+        path: '/getNameCostumer',
         verb: 'get'
       }
     }
@@ -57,6 +58,10 @@ module.exports = function (Costumer) {
 
 
 
+
+
+
+  //get ID costumer
   //remote method ID
   Costumer.remoteMethod(
     'getById', {

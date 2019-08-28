@@ -1,10 +1,12 @@
 'use strict';
 
 module.exports = function (Commodity) {
+
+  //get name item
   //remote method
   Commodity.remoteMethod(
-    'getNameLike', {
-      description: 'get name like',
+    'getNameName', {
+      description: 'get name name',
       accepts: [{
         arg: 'name',
         type: 'string'
@@ -15,7 +17,7 @@ module.exports = function (Commodity) {
         root: true
       },
       http: {
-        path: '/getNameLike',
+        path: '/getNameCommo',
         verb: 'get'
       }
     }
@@ -23,7 +25,7 @@ module.exports = function (Commodity) {
 
 
   //fungsi getNameLike - > get name with first name param
-  Commodity.getNameLike = function (name, callback) {
+  Commodity.getNameName = function (name, callback) {
     new Promise(function (resolve, reject) {
 
       //query filter variable
@@ -61,7 +63,7 @@ module.exports = function (Commodity) {
 
 
 
-
+  //get name category
   //remote method
   Commodity.remoteMethod(
     'getNameLike', {
@@ -113,12 +115,14 @@ module.exports = function (Commodity) {
     }).catch(function (err) {
       callback(err);
     });
-  };
+  }
 
 
 
 
 
+
+  //get commodity ID
   //remote method ID
   Commodity.remoteMethod(
     'getById', {

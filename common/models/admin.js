@@ -2,7 +2,7 @@
 
 module.exports = function (Admin) {
 
-
+  //get name admin
   //remote method
   Admin.remoteMethod(
     'getNameLike', {
@@ -17,7 +17,7 @@ module.exports = function (Admin) {
         root: true
       },
       http: {
-        path: '/getNameLike',
+        path: '/getNameAdmin',
         verb: 'get'
       }
     }
@@ -61,6 +61,8 @@ module.exports = function (Admin) {
 
 
 
+
+  //get admin ID
   //remote method ID
   Admin.remoteMethod(
     'getById', {

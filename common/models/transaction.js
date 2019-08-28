@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = function (Transaction) {
+
+
+  //get name costumer
   //remote method
   Transaction.remoteMethod(
     'getNameLike', {
@@ -58,7 +61,7 @@ module.exports = function (Transaction) {
 
 
 
-
+  //get name item
   //remote method
   Transaction.remoteMethod(
     'getNameLike', {
@@ -115,6 +118,7 @@ module.exports = function (Transaction) {
 
 
 
+  //get transaction ID
   //remote method ID
   Transaction.remoteMethod(
     'getById', {

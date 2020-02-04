@@ -58,10 +58,6 @@ module.exports = function (Admin) {
 
 
 
-
-
-
-
   //get admin ID
   //remote method ID
   Admin.remoteMethod(
